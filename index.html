@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noted</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" href="./resources/css/app.css">
+</head>
+<body>
+    <div class="container">
+        <div id="book_shelf">
+            <h1>
+                <span class="material-icons">assignment</span>
+                <span>Noted App</span>
+            </h1>
+            <div id="note_new">
+                <span class="material-icons">queue</span>
+                <span>New Note</span>
+            </div>
+            <div>
+                <span class="material-icons">library_books</span>
+                <span>All Notes</span>
+            </div>
+        </div>
+        <div id="edit_note_section">
+            <div id="note_header">
+                <input type="text" id="note_title" />
+                <button type="button" id="note_remove" class="btn_danger material-icons">delete</button>
+            </div>
+            <textarea id="note_body"></textarea>
+            <div id="note_footer">
+                <button type="button" id="note_save" class="btn_primary material-icons">save</button>
+                
+            </div>
+        </div>
+    </div>
+    
+    <!-- FireBase -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+
+    <!-- FireBase Config -->
+    <script src="./resources/js/config.js"></script>
+
+    <!-- Application Js -->
+    <script src="./resources/js/functionality.js"></script>
+    <script src="./resources/js/app.js"></script>
+</body>
+</html>

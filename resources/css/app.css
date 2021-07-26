@@ -1,0 +1,48 @@
+/* Notes App */
+
+/* Reset Css */
+*{margin: 0;padding: 0;box-sizing: border-box;color: #fff;font-family: 'Roboto', sans-serif;}
+
+/* Layout */
+body{font-size: 18px;}
+.container{display: grid; grid-template-columns: 1fr 4fr; height: 100%;background: #190e43;}
+
+/* Buttons */
+.btn_primary, .btn_danger{font-size: 2rem;font-weight: 500;height: 100%;cursor: pointer;padding: 0 0.9rem 0 1.3rem;border: 0;}
+.btn_primary{margin-left: auto;background: #1a1743;}
+.btn_danger{background: #e91e63;}
+
+/* Side Panel*/
+#book_shelf{flex: 1;display: flex;flex-direction: column;}
+#book_shelf h1{width: 100%;height: 4rem;display: flex;align-items: flex-end;font-weight: 500;font-size: 1.5rem;letter-spacing: 1.5px;padding: 1rem 1.2rem;border-bottom: 0.3px solid #989898;}
+#book_shelf h1 span:first-child{font-size: 2rem;margin-right: 0.5rem;}
+#book_shelf span{color: #e8e8e8;}
+#book_shelf div{padding: 1rem 1.6rem 5px;display: flex;align-items: center;cursor: default;}
+#book_shelf div span{font-size: 1rem;color: #8d8a8a;}
+#book_shelf div .material-icons{font-size: 1.2rem;line-height: 0.7;color: #d5d0d0;padding: 0 .3rem 0 0;}
+#book_shelf ul{display: flex;flex-direction: column-reverse;overflow-y: auto;}
+#book_shelf ul::-webkit-scrollbar{width: .6rem;}
+#book_shelf ul::-webkit-scrollbar-thumb{background-color: #a6a5a5;}
+#book_shelf li{color: #d0cfdd;list-style: none;font-size: 1.2rem;padding: 0.4rem 2.8rem;line-height: 1.2;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;cursor: pointer;}
+#book_shelf .active{background: #b72d2d;color: #f6f6f6;font-weight: 500;}
+#book_shelf li:hover:not(.active){color: #313131;background: #e4d4d4;}
+#book_shelf #note_new{cursor: pointer;}
+
+/* Main Section */
+#edit_note_section{flex: 5;display: flex;flex-direction: column;}
+#note_header{z-index: 1;display: flex;align-items: center;box-shadow: 0px 0px 6px #cbb8b8;border-bottom: 1px solid #cecece;}
+#note_title, #note_body{border: 0;color: #000;padding: 0.6rem 0.85rem;}
+#note_title{height: 4.5rem;font-size: 1.5rem;background: #e4d4d4;z-index: 2;width: 100%;}
+#note_body{height: 100%;font-size: 1.3rem;background: #f0f0f0;}
+#note_title:focus, #note_body:focus{outline: none;}
+#note_footer{display: flex;height: 4rem;background: #e4d4d4;}
+
+
+/* Status Notifier */
+.status_notifier {position: absolute;bottom: 100px;right: 12px;height: 65px;border: 1px solid #dedede;background: #fff;display: flex;align-items: center;}
+.status_notifier div {display: flex;flex-direction: column;padding: 0 16px;min-width: 14vw;}
+.status_notifier span:first-child {font-weight: 400;line-height: 1.4;font-size: 20px;color: #4f646f;}
+.status_notifier span:last-child {font-size: 16px;color: #948a8a;}
+.status_notifier i {padding: 15px;height: 100%;font-size: 33px;}
+.status_notifier.success i {background: #8bc34a;}
+.status_notifier.error i {background: #f44336;}
